@@ -18,8 +18,8 @@ public class NumberWizard : MonoBehaviour
         Debug.Log("Pilih nomor anda dan jangan beri tahu saya");
         Debug.Log("Angka tertinggi yang bisa anda pilih adalah : " + max);
         Debug.Log("Angka terendah yang bisa anda pilih adalah : " + min);
-        Debug.Log("Beri tahu saya jika nomor anda lebih tinggi atau lebih rendah dari 500");
-        Debug.Log("Tombol atas = tertinggi, Tombol bawah = terendah, Tekan Enter = Kembali");
+        Debug.Log("Beri tahu saya jika nomor anda lebih tinggi atau lebih rendah dari " + tebakan);
+        Debug.Log("Tombol atas = tertinggi, Tombol bawah = terendah, Tekan Enter = kembali");
         max = max + 1;
     }
 
@@ -27,16 +27,16 @@ public class NumberWizard : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
-            Debug.Log("Tombol panah atas ditekan");
             min = tebakan;
             tebakan = (max + min) / 2;
+            Debug.Log("Apakah nomor anda lebih besar atau lebih kecil dari = " + tebakan + " ?");
             Debug.Log(tebakan);
         }
         else if (Input.GetKeyDown(KeyCode.DownArrow))
         {
-            Debug.Log("Tombol panah bawah ditekan");
             max = tebakan;
             tebakan = (max + min) / 2;
+            Debug.Log("Apakah nomor anda lebih besar atau lebih kecil dari = " + tebakan + " ?");
             Debug.Log(tebakan);
         }
         else if (Input.GetKeyDown(KeyCode.Return))
