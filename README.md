@@ -1,4 +1,4 @@
-# NumberWizard---UdemyCourse
+# NumberWizard
 
 using System.Collections;
 using System.Collections.Generic;
